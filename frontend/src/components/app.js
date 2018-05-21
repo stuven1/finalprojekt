@@ -2,7 +2,7 @@ import React from "react"
 import Weather from "./weather"
 import Activity from "./activity"
 import Clock from "./clock"
-import Stockholm from "./stockholm-image.jpg"
+import Stockholm from "./Stockholm"
 
 export default class App extends React.Component {
 
@@ -58,7 +58,8 @@ export default class App extends React.Component {
     return (
       <div>
         <div className="weatherOfTheDay">
-          <h1>🌍 Weather world, Stockholm - whats up?</h1>
+          <Stockholm />
+          <h1>Weather world, Stockholm - whats up?</h1>
             <Clock />
         </div>
         <div>
@@ -70,9 +71,6 @@ export default class App extends React.Component {
               iconURL={this.state.todaysWeather.iconURL}
               weatherCategory={this.state.todaysWeather.weatherCategory} />}
         </div>
-
-        <img className="Stockholm-img" src={Stockholm} alt="Stockholm siluett" />
-
         <div>
           <p className="activity-text"><u>Activity suggestions</u></p>
         </div>

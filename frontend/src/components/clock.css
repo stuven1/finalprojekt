@@ -1,10 +1,9 @@
 h4{
-  color: darkblue;
-  font-family: 'Amatic SC', cursive, sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 0.2;
-  font-style: underline;
+  font-size: 100px;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+  text-align: center;
+  margin: 0px;
 }
 
 .clock-text {
@@ -18,6 +17,7 @@ h4{
 
 .time-box{
   display: flex;
-  justify-content: center;
+  justify-content: left;
   background-color: white;
+  margin-left: 110px;
 }
