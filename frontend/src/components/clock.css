@@ -13,11 +13,11 @@ h4{
   line-height: 0.2;
   font-weight: bold;
   color: black;
+  margin-left: 230px;
 }
 
 .time-box{
   display: flex;
   justify-content: left;
   background-color: white;
-  margin-left: 110px;
 }

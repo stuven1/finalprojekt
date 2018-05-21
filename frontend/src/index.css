@@ -3,17 +3,29 @@ body {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 80px;
   font-family: 'Amatic SC', cursive;
   color: black;
   text-align: center;
   margin: 0px;
 }
 
+i{
+  color: red;
+}
+
+.box-container-img{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.StockholmRight{
+  align-items: right;
+}
 @media (max-width: 600px) {
 
 		h1 {
-		font-size: 40px;
+		font-size: 20px;
     text-align: center;
 		}
 
@@ -26,12 +38,21 @@ h1 {
       width: calc(100% - 20px);
       /* background-color: green; */
     }
+
+    .Stockholm{
+      width: 80%;
+    }
+
+    .clock-text{
+      font-size: 20px;
+      margin-left: 50px;
+    }
 }
 
 /* TABLETS-SIZE */
 @media (min-width: 600px) and (max-width: 900px) {
   	h1 {
-  	  font-size: 60px;
+  	  font-size: 45px;
       text-align: center;
   	}
 
@@ -43,4 +64,8 @@ h1 {
       margin: 5px;
       width: calc(50% - 70px);
 }
+    .clock-text{
+      font-size: 35px;
+      margin-left: 140px;
+    }
 }

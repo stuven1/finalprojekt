@@ -2,7 +2,8 @@ import React from "react"
 import Weather from "./weather"
 import Activity from "./activity"
 import Clock from "./clock"
-import Stockholm from "./Stockholm"
+import Stockholm from "./stockholm-image.jpg"
+import StockholmRight from "./stockholm-image-left.jpg"
 
 export default class App extends React.Component {
 
@@ -58,10 +59,13 @@ export default class App extends React.Component {
     return (
       <div>
         <div className="weatherOfTheDay">
-          <Stockholm />
-          <h1>Weather world, Stockholm - whats up?</h1>
+          <img className="Stockholm" src={Stockholm} alt="Stockholm siluett" />
+          <div>
+            <h1><i className="fas fa-angle-double-left"></i> Weather world, Stockholm - whats up?<i className="fas fa-angle-double-right"></i></h1>
+          </div>
             <Clock />
         </div>
+
         <div>
           {this.state.todaysWeather &&
             <Weather
@@ -70,13 +74,14 @@ export default class App extends React.Component {
               description={this.state.todaysWeather.weatherDescription}
               iconURL={this.state.todaysWeather.iconURL}
               weatherCategory={this.state.todaysWeather.weatherCategory} />}
+
         </div>
         <div>
           <p className="activity-text"><u>Activity suggestions</u></p>
         </div>
 
         <div className="allActivities">
-          {filteredActivities.map(activity => {
+          {filteredActivities.map(activity =>{
             return <Activity
               activityName={activity.activityName}
               content={activity.content}
@@ -85,6 +90,9 @@ export default class App extends React.Component {
               admissionAdults={activity.admissionAdults}
               location={activity.location} />
           })}
+        </div>
+        <div className="box-container-img">
+        <img className="StockholmRight" src={StockholmRight} alt="Stockholm siluett right" />
         </div>
       </div>
     )
