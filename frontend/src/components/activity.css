@@ -1,0 +1,64 @@
+.oneActivity .activity-text p {
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-size: 40px;
+}
+
+.activity-text u{
+  font-size: 90px;
+  color: tomato;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+}
+
+.oneActivity p{
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+  font-weight: bold;
+}
+
+.oneActivity .activity-name {
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+  margin-left: 10px;
+  font-weight: bold;
+  margin: 40px;
+}
+
+.oneActivity{
+  margin: 5px;
+  background-color: lightgreen;
+  width: calc(25% - 70px);
+  padding: 30px;
+}
+
+.allActivities{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.activity-link a {
+  text-decoration: none;
+  font-weight: bold;
+  color: darkblue;
+}
+
+.oneActivity .admission-fee {
+  color: white;
+  font-weight: bold;
+}
+
+.oneActivity .location-text{
+  color: white;
+    line-height: 0.2;
+}
+
+.admission{
+  line-height: 0.2;
+}
+
+.Stockholm-img {
+  width: 20%;
+}

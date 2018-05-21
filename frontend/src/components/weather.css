@@ -1,0 +1,48 @@
+.intro-text{
+  color: darkblue;
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 0.2;
+  font-style: underline;
+}
+
+.weather-box .city-text {
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: red;
+  text-transform: uppercase;
+  line-height: 0.2;
+}
+
+.weather-box .weather-description-text{
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-size: 20px;
+  color: green;
+  text-transform: uppercase;
+  line-height: 0.2;
+  font-weight: bold;
+
+}
+
+.weather-box .temperatur-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 50px;
+  color: black;
+  line-height: 0.2;
+  font-weight: bold;
+  color: orange;
+}
+
+.weather-icon img{
+  width: 55px;
+  height: 55px;
+}
+
+.weather-box{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 30px;
+}

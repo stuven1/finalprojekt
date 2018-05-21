@@ -1,0 +1,23 @@
+h4{
+  color: darkblue;
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 0.2;
+  font-style: underline;
+}
+
+.clock-text {
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 0.2;
+  font-weight: bold;
+  color: black;
+}
+
+.time-box{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
