@@ -5,7 +5,6 @@
 
 .activity-text u{
   font-size: 90px;
-  color: tomato;
   font-family: 'Amatic SC', cursive;
   color: black;
 }
@@ -28,9 +27,10 @@
 
 .oneActivity{
   margin: 5px;
-  background-color: lightgreen;
-  width: calc(25% - 70px);
+  background-color: lightblue;
+  width: calc(22% - 40px);
   padding: 30px;
+  border: 3px solid darkblue;
 }
 
 .allActivities{
@@ -46,13 +46,13 @@
 }
 
 .oneActivity .admission-fee {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .oneActivity .location-text{
-  color: white;
-    line-height: 0.2;
+  color: black;
+  line-height: 0.2;
 }
 
 .admission{

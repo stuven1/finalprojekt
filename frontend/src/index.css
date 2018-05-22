@@ -23,6 +23,11 @@ i{
 .StockholmRight{
   align-items: right;
 }
+
+.activity-text {
+  text-align: center;
+}
+
 @media (max-width: 600px) {
 
 		h1 {
@@ -36,8 +41,7 @@ i{
 
     .oneActivity {
       margin: 5px;
-      width: calc(100% - 20px);
-      /* background-color: green; */
+      width: calc(100% - 80px);
     }
 
     .Stockholm{
@@ -63,7 +67,7 @@ i{
 
     .oneActivity {
       margin: 5px;
-      width: calc(50% - 70px);
+      width: calc(50% - 80px);
 }
     .clock-text{
       font-size: 35px;

@@ -11,7 +11,8 @@ export default class App extends React.Component {
     super(props)
     this.state = {
       todaysWeather: null,
-      allActivities: []
+      allActivities: [],
+      freeAdmission: false
     }
   }
 
@@ -45,6 +46,18 @@ export default class App extends React.Component {
     })
   }
 
+  handleFreeAdmissions=event => {
+    const freeOrNotFree = event.target.value
+    console.log(event.target.value)
+    const freeAdmission = this.setState({ freeAdmission: event.target.value })
+
+    if (freeOrNotFree==="free") {
+      this.setState({ freeAdmission:true })
+    } else {
+      ({ freeAdmission:false })
+    }
+}
+
   render() {
     const filteredActivities = this.state.allActivities.filter(activity => {
       const hasRightWeather = activity.weathergroups
@@ -61,10 +74,16 @@ export default class App extends React.Component {
         <div className="weatherOfTheDay">
           <img className="Stockholm" src={Stockholm} alt="Stockholm siluett" />
           <div>
-            <h1><i className="fas fa-angle-double-left"></i> Weather world, Stockholm - whats up?<i className="fas fa-angle-double-right"></i></h1>
+            <h1><i className="fas fa-angle-double-left"></i>Weather world, Stockholm - whats up?<i className="fas fa-angle-double-right"></i></h1>
           </div>
-            <Clock />
+          <Clock />
         </div>
+
+        <select onChange={this.handleFreeAdmissions}>
+          <option value="free">Free</option>
+          <option value="notFree">Not Free</option>
+        </select>
+
         <div>
           {this.state.todaysWeather &&
             <Weather
