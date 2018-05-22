@@ -12,7 +12,6 @@ h1 {
 
 i{
   color: darkblue;
-  /* text-indent: 100px; */
 }
 
 .box-container-img{
@@ -63,7 +62,7 @@ i{
 }
 
 /* TABLETS-SIZE */
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 600px){
   	h1 {
   	  font-size: 45px;
       text-align: center;
@@ -76,9 +75,18 @@ i{
     .oneActivity {
       margin: 5px;
       width: calc(50% - 80px);
-}
+    }
+
     .clock-text{
       font-size: 35px;
-      margin-left: 140px;
+      margin-left: 390px;
     }
+}
+
+/* DESKTOP-SIZE */
+@media (min-width: 900px){
+.oneActivity {
+  margin: 5px;
+  width: calc(25% - 78px);
+  }
 }
