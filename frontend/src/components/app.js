@@ -49,12 +49,11 @@ export default class App extends React.Component {
   handleFreeAdmissions=event => {
     const freeOrNotFree = event.target.value
     console.log(event.target.value)
-    const freeAdmission = this.setState({ freeAdmission: event.target.value })
 
-    if (freeOrNotFree==="free") {
-      this.setState({ freeAdmission:true })
+    if (freeOrNotFree === "free") {
+      this.setState({ freeAdmission: true })
     } else {
-      ({ freeAdmission:false })
+      this.setState({ freeAdmission: false })
     }
 }
 
@@ -65,8 +64,10 @@ export default class App extends React.Component {
 
       const hasMinTemp = activity.mintemp < this.state.todaysWeather.temperature
       const hasMaxTemp = activity.maxtemp > this.state.todaysWeather.temperature
+      const hasFreeAdmisson = this.state.freeAdmission === activity.admissionAdults
+      console.log(this.state.freeAdmission)
 
-      return hasRightWeather && hasMinTemp && hasMaxTemp
+      return hasRightWeather && hasMinTemp && hasMaxTemp && hasFreeAdmisson
     })
 
     return (
@@ -80,6 +81,7 @@ export default class App extends React.Component {
         </div>
 
         <select onChange={this.handleFreeAdmissions}>
+          <option value="category">Select category</option>
           <option value="free">Free</option>
           <option value="notFree">Not Free</option>
         </select>
