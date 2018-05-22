@@ -65,7 +65,6 @@ export default class App extends React.Component {
           </div>
             <Clock />
         </div>
-
         <div>
           {this.state.todaysWeather &&
             <Weather
@@ -74,12 +73,10 @@ export default class App extends React.Component {
               description={this.state.todaysWeather.weatherDescription}
               iconURL={this.state.todaysWeather.iconURL}
               weatherCategory={this.state.todaysWeather.weatherCategory} />}
-
         </div>
         <div>
           <p className="activity-text"><u>Activity suggestions</u></p>
         </div>
-
         <div className="allActivities">
           {filteredActivities.map(activity =>{
             return <Activity

@@ -1,5 +1,5 @@
 .intro-text{
-  color: black;
+  color: darkblue;
   font-family: 'Amatic SC', cursive, sans-serif;
   font-weight: bold;
   font-size: 30px;
@@ -11,7 +11,7 @@
   font-family: 'Amatic SC', cursive, sans-serif;
   font-weight: bold;
   font-size: 25px;
-  color: red;
+  color: black;
   text-transform: uppercase;
   line-height: 0.2;
 }
@@ -19,7 +19,7 @@
 .weather-box .weather-description-text{
   font-family: 'Amatic SC', cursive, sans-serif;
   font-size: 20px;
-  color: green;
+  color: black;
   text-transform: uppercase;
   line-height: 0.2;
   font-weight: bold;
@@ -28,11 +28,10 @@
 
 .weather-box .temperatur-text {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 50px;
-  color: black;
+  font-size: 35px;
+  color: darkblue;
   line-height: 0.2;
   font-weight: bold;
-  color: orange;
 }
 
 .weather-icon img{
@@ -44,5 +43,7 @@
   display: flex;
   justify-content: center;
   background-color: white;
-  padding: 30px;
+  padding: 25px;
+  text-align: center;
+  line-height: 0.2;
 }

@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 50px;
   font-family: 'Amatic SC', cursive;
   color: black;
   text-align: center;
@@ -11,7 +11,8 @@ h1 {
 }
 
 i{
-  color: red;
+  color: darkblue;
+  /* text-indent: 100px; */
 }
 
 .box-container-img{
@@ -45,7 +46,7 @@ i{
 
     .clock-text{
       font-size: 20px;
-      margin-left: 50px;
+      margin-left: 73px;
     }
 }
 
