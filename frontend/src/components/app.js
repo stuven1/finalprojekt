@@ -80,12 +80,6 @@ export default class App extends React.Component {
           <Clock />
         </div>
 
-        <select onChange={this.handleFreeAdmissions}>
-          <option value="category">Select category</option>
-          <option value="free">Free</option>
-          <option value="notFree">Not Free</option>
-        </select>
-
         <div>
           {this.state.todaysWeather &&
             <Weather
@@ -96,7 +90,14 @@ export default class App extends React.Component {
               weatherCategory={this.state.todaysWeather.weatherCategory} />}
         </div>
         <div>
-          <p className="activity-text"><u>Activity suggestions</u></p>
+          <p className="activity-text"><u>Activity suggestions</u>
+          <select className="select-option" onChange={this.handleFreeAdmissions}>
+              <option value="category">option</option>
+              <option value="free">Free - Adults</option>
+              <option value="notFree">Not Free - Adults</option>
+            </select>
+          </p>
+
         </div>
         <div className="allActivities">
           {filteredActivities.map(activity =>{
