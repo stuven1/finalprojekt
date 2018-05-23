@@ -13,11 +13,12 @@ h4{
   line-height: 0.2;
   font-weight: bold;
   color: black;
-  margin-left: 390px;
+  text-align: center;
 }
 
 .time-box{
   display: flex;
   justify-content: left;
   background-color: white;
+  text-align: center;
 }

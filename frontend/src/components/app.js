@@ -74,10 +74,10 @@ export default class App extends React.Component {
       <div>
         <div className="weatherOfTheDay">
           <img className="Stockholm" src={Stockholm} alt="Stockholm siluett" />
-          <div>
+                <Clock />
+            <div>
             <h1><i className="fas fa-angle-double-left"></i>Weather world, Stockholm - whats up?<i className="fas fa-angle-double-right"></i></h1>
-          </div>
-          <Clock />
+            </div>
         </div>
 
         <div>

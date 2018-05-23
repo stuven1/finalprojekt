@@ -57,7 +57,7 @@ i{
 
     .clock-text{
       font-size: 20px;
-      margin-left: 73px;
+      text-align: center;
     }
 }
 
@@ -79,7 +79,6 @@ i{
 
     .clock-text{
       font-size: 35px;
-      margin-left: 390px;
     }
 }
 
