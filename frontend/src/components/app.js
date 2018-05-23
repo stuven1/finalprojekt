@@ -17,10 +17,8 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log(1)
     fetch("https://api.openweathermap.org/data/2.5/weather?q=Stockholm,Sweden&units=metric&APPID=1b105aada7b8b5bc46bf82a2950796ef").then(response =>
       response.json()).then(json => {
-      console.log(2)
       this.setState({
         todaysWeather:
         {
@@ -37,25 +35,23 @@ export default class App extends React.Component {
   }
 
   getActivities() {
-    console.log(3)
     fetch("http://localhost:8080/activities").then(response => (
       response.json()
     )).then(json => {
-      console.log(4)
+
       this.setState({ allActivities: json })
     })
   }
 
   handleFreeAdmissions=event => {
     const freeOrNotFree = event.target.value
-    console.log(event.target.value)
 
     if (freeOrNotFree === "free") {
       this.setState({ freeAdmission: true })
     } else {
       this.setState({ freeAdmission: false })
     }
-}
+  }
 
   render() {
     const filteredActivities = this.state.allActivities.filter(activity => {
@@ -65,7 +61,6 @@ export default class App extends React.Component {
       const hasMinTemp = activity.mintemp < this.state.todaysWeather.temperature
       const hasMaxTemp = activity.maxtemp > this.state.todaysWeather.temperature
       const hasFreeAdmisson = this.state.freeAdmission === activity.admissionAdults
-      console.log(this.state.freeAdmission)
 
       return hasRightWeather && hasMinTemp && hasMaxTemp && hasFreeAdmisson
     })
@@ -74,10 +69,10 @@ export default class App extends React.Component {
       <div>
         <div className="weatherOfTheDay">
           <img className="Stockholm" src={Stockholm} alt="Stockholm siluett" />
-                <Clock />
-            <div>
-            <h1><i className="fas fa-angle-double-left"></i>Weather world, Stockholm - whats up?<i className="fas fa-angle-double-right"></i></h1>
-            </div>
+          <Clock />
+          <div>
+            <h1><i className="fas fa-angle-double-left"></i> Weather world, Stockholm - whats up? <i className="fas fa-angle-double-right"></i></h1>
+          </div>
         </div>
 
         <div>
@@ -89,18 +84,19 @@ export default class App extends React.Component {
               iconURL={this.state.todaysWeather.iconURL}
               weatherCategory={this.state.todaysWeather.weatherCategory} />}
         </div>
+
         <div>
           <p className="activity-text"><u>Activity suggestions</u>
-          <select className="select-option" onChange={this.handleFreeAdmissions}>
+            <select className="select-option" onChange={this.handleFreeAdmissions}>
               <option value="category">option</option>
               <option value="free">Free - Adults</option>
               <option value="notFree">Not Free - Adults</option>
             </select>
           </p>
-
         </div>
+
         <div className="allActivities">
-          {filteredActivities.map(activity =>{
+          {filteredActivities.map(activity => {
             return <Activity
               activityName={activity.activityName}
               content={activity.content}
@@ -110,8 +106,9 @@ export default class App extends React.Component {
               location={activity.location} />
           })}
         </div>
+
         <div className="box-container-img">
-        <img className="StockholmRight" src={StockholmRight} alt="Stockholm siluett right" />
+          <img className="StockholmRight" src={StockholmRight} alt="Stockholm siluett right" />
         </div>
       </div>
     )

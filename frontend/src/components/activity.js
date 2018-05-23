@@ -5,7 +5,14 @@ class Activity extends React.Component {
 
   render() {
     const
-     { activityName, content, admissionChildren,admissionAdults, activityLink, location }
+      {
+        activityName,
+        content,
+        admissionChildren,
+        admissionAdults,
+        activityLink,
+        location
+      }
      = this.props
     const freeAdmissionforChild = admissionChildren ? "Free" : "Not free"
     const freeAdmissionforAdult = admissionAdults ? "Free" : "Not free"

@@ -8,7 +8,7 @@ class Weather extends React.Component {
     todaysWeather: null
     }
   }
-  
+
   render() {
     return (
       <div>

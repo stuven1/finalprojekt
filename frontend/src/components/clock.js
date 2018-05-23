@@ -28,10 +28,9 @@ class Clock extends React.Component {
   render() {
     return (
       <div>
-      <div className="time-box">
+        <div className="time-box">
           <p className="clock-text">Time: {this.state.date.toLocaleTimeString()}</p>
-      </div>
-        {/* <img className="Stockholm-img" src={Stockholm} alt="Stockholm siluett" /> */}
+        </div>
       </div>
     )
   }
