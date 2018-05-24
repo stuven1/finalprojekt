@@ -42,7 +42,9 @@ app.post("/activities", (req, res) => {
     .catch(err => { res.status(400).send("ooops, err 🔧") })
 })
 
-app.listen(8080, () => {
+const port = process.env.PORT || 8080
+
+app.listen(port, () => {
     console.log("Products API listening on port 8080!")
   }
 )
