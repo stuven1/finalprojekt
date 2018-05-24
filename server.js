@@ -34,6 +34,11 @@ app.get("/activities", (req, res) => {
   })
 })
 
+app.get("/test", (req, res) => {
+
+  res.json({test: "ok"})
+})
+
 app.post("/activities", (req, res) => {
   const createdActivities = new Activities(req.body)
 
