@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 
 app.use(cors())
 
-mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/activities", { useMongoClient: true })
+mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/activities")
 
 mongoose.Promise = Promise
 
